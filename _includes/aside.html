@@ -6,7 +6,7 @@
   </div>
   <ul class="list-group">
     {% for post in site.posts limit: 5 %}
-    <li class="list-group-item"> <a href="{{ post.url }}">{{ post.post-heading | truncatewords: 9 | capitalize }}</a>
+    <li class="list-group-item"> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.post-heading | truncatewords: 9 | capitalize }}</a>
       <p><small><strong>{{ post.date | date: "%A, %B %e, %Y"  }} </strong> . {{ post.category }} {{ post.post-by }} , {{post.tags}}</small></p>
     </li>
     {% endfor %}
@@ -19,7 +19,7 @@
   </div>
   <ul class="list-group">
     {% for post in site.related_posts limit: 5 %}
-    <li class="list-group-item"> <a href="{{ post.url }}">{{ post.post-heading | truncatewords: 9 | capitalize }}</a>
+    <li class="list-group-item"> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.post-heading | truncatewords: 9 | capitalize }}</a>
       <p><small><strong>{{ post.date | date: "%A, %B %e, %Y"  }} </strong> . {{ post.category }} {{ post.post-by }} , {{post.tags}}</small></p>
     </li>
     {% endfor %}
@@ -40,7 +40,7 @@
     {% assign tags = site.tags | sort %}
 		{% for tag in tags %}
          
-            <a href="{{ site.url }}/category.html#{{ tag | first | slugify }}/"
+            <a href="{{ site.baseurl }}/category.html#{{ tag | first | slugify }}/"
                  class="label label-primary">
                     {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
             </a>

@@ -5,6 +5,7 @@ author: "vivek kumar"
 url: ""
 github : username
 twitter : username
+baseurl: /Blog
 
 paginate: 5
 
