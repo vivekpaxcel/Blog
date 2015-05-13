@@ -1,0 +1,307 @@
+<!doctype html>
+<!doctype html>
+<html>
+<head>	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Blog Settings -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Basic Blog Strucre for Paxcel Technologies">
+    <meta name="keywords" content="">
+	<meta name="author" content="vivek kumar">
+
+	<title>Tool</title>
+
+	<!-- Bootstrap CSS file -->
+	<link href="/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet" />
+    
+    <!-- Blog CSS file -->
+	<link href="/css/style.css" rel="stylesheet" />
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!-- my custom google search -->
+
+<script language="Javascript" type="text/javascript">
+  function my_search_google()
+  {
+    var query = document.getElementById("my-google-search").value;
+    window.open("http://google.com/search?q=" + query + "%20site:" + "http://boxupp.com");
+  }
+</script>
+</head>
+
+
+<body>
+<!-- Header -->
+
+<header class="navbar navbar-inverse  bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"> 
+      	<span class="sr-only">Toggle navigation</span> 
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span> 
+      </button>
+      <a href="/index.html" class="navbar-brand col-md-7"><img src="/images/logo.png" alt="Boxupp Blog" class="img-responsive"></a> 
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <form class="navbar-form navbar-right" role="search" onsubmit="my_search_google()">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" id="my-google-search"> 
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    <!--  <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>-->
+      
+       <ul class="nav navbar-nav">
+      
+        <li  >
+          <a href="/index.html">Home</a>
+        </li>
+      
+        <li  >
+          <a href="/about.html">About Us</a>
+        </li>
+      
+        <li  >
+          <a href="/category.html">Category</a>
+        </li>
+      
+        <li  >
+          <a href="/contact.html">Contact</a>
+        </li>
+      
+    </ul>
+      
+      
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row"> 
+    <!-- main content start here -->
+    <div class="col-md-8"><style>
+	.item{
+    background: #333;    
+    text-align: center;
+    height:400px !important;
+}
+.carousel{
+    margin-top: 20px;
+}
+
+.share-page {
+    text-align: center;
+    background: $secondary-color;
+    color: $light-color;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin: 1.5 * $spacing-unit 0;
+
+    a {
+        font-weight: 700;
+        color: #fff;
+        margin-left: 10px;
+
+        &:hover {
+            border-bottom: 1px dashed #fff;
+        }
+    }
+}
+</style>
+<div id="home" class="grid post">
+  <div class="unit whole">
+    <article>
+      <header>
+        <h1>Jekyll based tool for creat a website automatic</h1>
+        
+        <p class="meta">
+          <time class="timeago postlist-meta" datetime="2015-05-07"><i class="fa fa-calendar"></i>May 7, 2015</time>
+          <a class="sharer facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-facebook"></i></a>  <a class="sharer twitter" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href+'&via=username','_blank','height=300,width=600');return false;"><i class="fa fa-twitter"></i></a>  </p>
+      </header>
+      <section> 
+        <div class="tags"> Tagged:
+           <span><i class="fa fa-tag"></i>tool</span>  </div>
+        
+        
+        <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+ </section>
+      
+      <footer>
+        <p><a href="#disqus_thread" id="showComments">Comments</a></p>
+        <div id="disqus_thread"></div>
+            <div class="share-page"> 
+                Share this on &rarr; 
+                <a href="https://twitter.com/intent/tweet?text=Tool&url=/2015/05/07/tool.html&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter" class="label label-primary"><i class="fa fa-twitter"></i> Twitter</a> 
+                <a href="https://facebook.com/sharer.php?u=/2015/05/07/tool.html" rel="nofollow" target="_blank" title="Share on Facebook" class="label label-info">Facebook</a> 
+                <a href="https://plus.google.com/share?url=/2015/05/07/tool.html" rel="nofollow" target="_blank" title="Share on Google+" class="label label-danger">Google+</a>
+                
+                <a href="http://pinterest.com/pin/create/button/?url=/2015/05/07/tool.html" rel="nofollow" target="_blank" title="Share on Google+" class="label label-warning">Pinterest</a>
+                <a href="http://www.linkedin.com/shareArticle?mini=true&url=/2015/05/07/tool.html&title=Tool" rel="nofollow" target="_blank" title="Share on Google+" class="label label-success">Linkedin</a>  
+                
+           </div>
+      </footer>
+       </article>
+  </div>
+</div>
+ </div>
+    
+    <!-- Aside start here -->
+    <div class="col-md-4"> <!-- Latest Posts -->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Latest Posts</h4>
+  </div>
+  <ul class="list-group">
+    
+    <li class="list-group-item"> <a href="/2015/05/07/tool.html">Jekyll based tool for creat a website automatic</a>
+      <p><small><strong>Thursday, May  7, 2015 </strong> .  Vivek Kumar , tool</small></p>
+    </li>
+    
+    <li class="list-group-item"> <a href="/2015/05/07/jekyll.html">Intro of  static website generator</a>
+      <p><small><strong>Thursday, May  7, 2015 </strong> .  Vivek Kumar , UI</small></p>
+    </li>
+    
+    <li class="list-group-item"> <a href="/2015/05/07/hello-world.html">Devops - an ingredient for survival of legacy it...</a>
+      <p><small><strong>Thursday, May  7, 2015 </strong> .  Vivek Kumar , General</small></p>
+    </li>
+    
+    <li class="list-group-item"> <a href="/2015/05/07/coding-test.html">Coding test for post jekyll</a>
+      <p><small><strong>Thursday, May  7, 2015 </strong> .  Vivek Kumar , Coding</small></p>
+    </li>
+    
+    <li class="list-group-item"> <a href="/2015/05/07/WebDesign.html">Web design is part of ui</a>
+      <p><small><strong>Thursday, May  7, 2015 </strong> .  Vivek Kumar , UI</small></p>
+    </li>
+    
+  </ul>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Related Posts</h4>
+  </div>
+  <ul class="list-group">
+    
+    <li class="list-group-item"> <a href="/2015/05/07/jekyll.html">Intro of  static website generator</a>
+      <p><small><strong>Thursday, May  7, 2015 </strong> .  Vivek Kumar , UI</small></p>
+    </li>
+    
+    <li class="list-group-item"> <a href="/2015/05/07/hello-world.html">Devops - an ingredient for survival of legacy it...</a>
+      <p><small><strong>Thursday, May  7, 2015 </strong> .  Vivek Kumar , General</small></p>
+    </li>
+    
+    <li class="list-group-item"> <a href="/2015/05/07/coding-test.html">Coding test for post jekyll</a>
+      <p><small><strong>Thursday, May  7, 2015 </strong> .  Vivek Kumar , Coding</small></p>
+    </li>
+    
+    <li class="list-group-item"> <a href="/2015/05/07/WebDesign.html">Web design is part of ui</a>
+      <p><small><strong>Thursday, May  7, 2015 </strong> .  Vivek Kumar , UI</small></p>
+    </li>
+    
+    <li class="list-group-item"> <a href="/2015/05/07/UI.html">Ui is a basic of it.</a>
+      <p><small><strong>Thursday, May  7, 2015 </strong> .  Vivek Kumar , UI</small></p>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Tags</h4>
+  </div> 
+    <!-- 
+    <a href="#" class="label label-primary">tool</a>
+     
+    <a href="#" class="label label-primary">UI</a>
+     
+    <a href="#" class="label label-primary">General</a>
+     
+    <a href="#" class="label label-primary">Coding</a>
+     
+    <a href="#" class="label label-primary">UI</a>
+     
+    <a href="#" class="label label-primary">UI</a>
+     
+    <a href="#" class="label label-primary">QA</a>
+    
+    -->
+    
+		
+         
+            <a href="/category.html#coding/"
+                 class="label label-primary">
+                    Coding (1)
+            </a>
+       
+	
+         
+            <a href="/category.html#general/"
+                 class="label label-primary">
+                    General (1)
+            </a>
+       
+	
+         
+            <a href="/category.html#qa/"
+                 class="label label-primary">
+                    QA (1)
+            </a>
+       
+	
+         
+            <a href="/category.html#ui/"
+                 class="label label-primary">
+                    UI (3)
+            </a>
+       
+	
+         
+            <a href="/category.html#tool/"
+                 class="label label-primary">
+                    tool (1)
+            </a>
+       
+	
+ 
+</div>
+ </div>
+  </div>
+</div>
+<!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'jekyllblogsite';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</body>
+</html>

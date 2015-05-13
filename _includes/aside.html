@@ -1,0 +1,50 @@
+<!-- Latest Posts -->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Latest Posts</h4>
+  </div>
+  <ul class="list-group">
+    {% for post in site.posts limit: 5 %}
+    <li class="list-group-item"> <a href="{{ post.url }}">{{ post.post-heading | truncatewords: 9 | capitalize }}</a>
+      <p><small><strong>{{ post.date | date: "%A, %B %e, %Y"  }} </strong> . {{ post.category }} {{ post.post-by }} , {{post.tags}}</small></p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Related Posts</h4>
+  </div>
+  <ul class="list-group">
+    {% for post in site.related_posts limit: 5 %}
+    <li class="list-group-item"> <a href="{{ post.url }}">{{ post.post-heading | truncatewords: 9 | capitalize }}</a>
+      <p><small><strong>{{ post.date | date: "%A, %B %e, %Y"  }} </strong> . {{ post.category }} {{ post.post-by }} , {{post.tags}}</small></p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Tags</h4>
+  </div> 
+    <!--{% for post in site.posts %} 
+    <a href="#" class="label label-primary">{{post.tags}}</a>
+    {% endfor %}
+    -->
+    {% assign tags = site.tags | sort %}
+		{% for tag in tags %}
+         
+            <a href="{{ site.url }}/category.html#{{ tag | first | slugify }}/"
+                 class="label label-primary">
+                    {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+            </a>
+       
+	{% endfor %}
+ 
+</div>

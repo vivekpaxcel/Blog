@@ -1,0 +1,88 @@
+---
+layout: default
+---
+<style>
+	.item{
+    background: #333;    
+    text-align: center;
+    height:400px !important;
+}
+.carousel{
+    margin-top: 20px;
+}
+
+.share-page {
+    text-align: center;
+    background: $secondary-color;
+    color: $light-color;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin: 1.5 * $spacing-unit 0;
+
+    a {
+        font-weight: 700;
+        color: #fff;
+        margin-left: 10px;
+
+        &:hover {
+            border-bottom: 1px dashed #fff;
+        }
+    }
+}
+</style>
+<div id="home" class="grid post">
+  <div class="unit whole">
+    <article>
+      <header>
+        <h1>{{ page.post-heading  }}</h1>
+        {% if page.images %}
+        <div class="bs-example">
+          <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel"> 
+            
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+              {% for img in page.images %}
+              <li data-target="#myCarousel" data-slide-to="forloop.index" class="{% if forloop.index  == 1 %} active {% endif %}"></li>
+              {% endfor %}
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner"> {% for img in page.images %}
+              <div class="item {% if forloop.index  == 1 %} active {% endif %} "> <img src="{{site.baseurl}}/media/{{img.path}}" alt="{{img.alt }}" img-responsive>
+                <div class="carousel-caption">
+                  <h3>{{img.title }}</h3>
+                  <p>{{img.caption }} </p>
+                </div>
+              </div>
+              {% endfor %} </div>
+            <!-- Carousel nav --> 
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a> <a class="carousel-control right" href="#myCarousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a> </div>
+        </div>
+        {% endif %}
+        <p class="meta">
+          <time class="timeago postlist-meta" datetime="{{ page.date | date: "%Y-%m-%d" }}"><i class="fa fa-calendar"></i>{{ page.date | date: "%B %-d, %Y" }}</time>
+          <a class="sharer facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-facebook"></i></a> {% if site.twitter %} <a class="sharer twitter" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href+'&via={{ site.twitter }}','_blank','height=300,width=600');return false;"><i class="fa fa-twitter"></i></a> {% else %} <a class="sharer twitter" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-twitter"></i></a> {% endif %} </p>
+      </header>
+      <section> {% if page.tags and page.tags.size > 0 %}
+        <div class="tags"> Tagged:
+          {% for tag in page.tags %} <span><i class="fa fa-tag"></i>{{ tag }}</span> {% endfor %} </div>
+        {% endif %}
+        
+        {{ content }} </section>
+      {% if site.disqus %}
+      <footer>
+        <p><a href="{{POST_URL}}#disqus_thread" id="showComments">Comments</a></p>
+        <div id="disqus_thread"></div>
+            <div class="share-page"> 
+                Share this on &rarr; 
+                <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter" class="label label-primary"><i class="fa fa-twitter"></i> Twitter</a> 
+                <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook" class="label label-info">Facebook</a> 
+                <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+" class="label label-danger">Google+</a>
+                
+                <a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+" class="label label-warning">Pinterest</a>
+                <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Share on Google+" class="label label-success">Linkedin</a>  
+                
+           </div>
+      </footer>
+      {% endif %} </article>
+  </div>
+</div>
