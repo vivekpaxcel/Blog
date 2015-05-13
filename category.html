@@ -2,7 +2,7 @@
 layout: default
 title: Category
 ---
-
+<h3>{{page.title}}</h3>
 {% for category in site.tags %}
   <li><a name="{{ category | first }}" id="{{ category | first }}">{{ category | first }}</a>
     <ul>
