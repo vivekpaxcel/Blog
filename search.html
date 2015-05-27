@@ -1,0 +1,31 @@
+---
+layout: page
+title: Search
+permalink: /search/
+---
+
+
+<div id="results">
+	
+</div>
+
+<script>
+	//,		post-heading : "{{ post.post-heading | strip_html }}"
+	var JEKYLL_POSTS = [];
+	{% for post in site.posts %}
+	//console.log('{{post}}');
+	JEKYLL_POSTS.push({
+		title: "{{ post.title }}",
+		link: "{{ post.url | prepend: site.baseurl }}",
+		content: "{{ post.content | strip_newlines | strip_html }}",
+		"post-heading" : "{{ post.post-heading | strip_html }}"
+	}); 
+    {% endfor %}
+</script>
+<script src="{{ "/js/search.js" | prepend: site.baseurl }}"></script>
+<script>
+	new jekyllSearch({
+		selector: "#results",
+		properties: ["title", "content","post-heading"]
+	});
+</script>
