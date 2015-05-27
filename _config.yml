@@ -6,7 +6,7 @@ email: vivek.kumar@paxcel.net
 url: ""
 github : username
 twitter : username
-baseurl: 
+baseurl: /Blog/
 
 paginate: 5
 
